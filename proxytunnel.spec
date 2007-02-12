@@ -1,5 +1,5 @@
 Summary:	Proxy Tunnel ssh-over-https hack
-Summary(pl):	Tunel proxy ssh-po-https
+Summary(pl.UTF-8):   Tunel proxy ssh-po-https
 Name:		proxytunnel
 Version:	1.5.0
 Release:	0.1
@@ -24,18 +24,18 @@ ProxyTunnel can currently do the following:
   connections, and then tunneling these connections to a specified
   destination.
 
-%description -l pl
-ProxyTunnel to program ³±cz±cy stdin i stdout do serwera gdzie¶ w
-sieci poprzez standardowe proxy HTTPS. Jest u¿ywany g³ównie do
+%description -l pl.UTF-8
+ProxyTunnel to program Å‚Ä…czÄ…cy stdin i stdout do serwera gdzieÅ› w
+sieci poprzez standardowe proxy HTTPS. Jest uÅ¼ywany gÅ‚Ã³wnie do
 tunelowania sesji SSH poprzez proxy HTTP(S), co pozwala na robienie
-wielu rzeczy, które nie by³yby mo¿liwe bez niego. ProxyTunnel
+wielu rzeczy, ktÃ³re nie byÅ‚yby moÅ¼liwe bez niego. ProxyTunnel
 aktualnie potrafi:
-- tworzyæ tunele przy u¿yciu proxy HTTP i HTTPS (rozumiej±cych
+- tworzyÄ‡ tunele przy uÅ¼yciu proxy HTTP i HTTPS (rozumiejÄ…cych
   polecenie HTTP CONNECT),
-- dzia³aæ jako sterownik backendu dla klienta OpenSSH i tworzyæ
-  po³±czenia SSH poprzez proxy HTTP(S),
-- dzia³aæ jako samodzielna aplikacja, nas³uchuj±c na jakim¶ porcie na
-  po³±czenia, a nastêpnie tuneluj±c te po³±czenia na podany adres.
+- dziaÅ‚aÄ‡ jako sterownik backendu dla klienta OpenSSH i tworzyÄ‡
+  poÅ‚Ä…czenia SSH poprzez proxy HTTP(S),
+- dziaÅ‚aÄ‡ jako samodzielna aplikacja, nasÅ‚uchujÄ…c na jakimÅ› porcie na
+  poÅ‚Ä…czenia, a nastÄ™pnie tunelujÄ…c te poÅ‚Ä…czenia na podany adres.
 
 %prep
 %setup -q
