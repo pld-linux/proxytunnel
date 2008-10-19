@@ -1,12 +1,12 @@
 Summary:	Proxy Tunnel ssh-over-https hack
 Summary(pl.UTF-8):	Tunel proxy ssh-po-https
 Name:		proxytunnel
-Version:	1.5.0
+Version:	1.9.0
 Release:	0.1
 License:	GPL
 Group:		Applications
-Source0:	http://proxytunnel.sourceforge.net/files/%{name}-%{version}.tgz
-# Source0-md5:	2a36409580391e25421fc06e82eed4ce
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
+# Source0-md5:	d74472b89c3f3b3b0abf6bd809ae34c2
 URL:		http://proxytunnel.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,13 +44,13 @@ aktualnie potrafi:
 %{__make} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
-	LDFLAGS="%{rpmldflags}"
+	LDFLAGS="%{rpmldflags} `pkg-config --libs openssl`"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -D proxytunnel $RPM_BUILD_ROOT%{_bindir}/proxytunnel
-install -D debian/proxytunnel.1 $RPM_BUILD_ROOT%{_mandir}/man1/proxytunnel.1
+%{__make} install \
+	PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
