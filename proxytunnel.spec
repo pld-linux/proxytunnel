@@ -5,9 +5,11 @@ Version:	1.9.0
 Release:	0.1
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
+Source0:	http://dl.sourceforge.net/proxytunnel/%{name}-%{version}.tgz
 # Source0-md5:	d74472b89c3f3b3b0abf6bd809ae34c2
 URL:		http://proxytunnel.sourceforge.net/
+BuildRequires:	openssl-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
