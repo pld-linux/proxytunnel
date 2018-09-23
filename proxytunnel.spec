@@ -1,13 +1,15 @@
 Summary:	Proxy Tunnel ssh-over-https hack
 Summary(pl.UTF-8):	Tunel proxy ssh-po-https
 Name:		proxytunnel
-Version:	1.9.0
-Release:	0.2
+Version:	1.9.1
+Release:	0.1
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/proxytunnel/%{name}-%{version}.tgz
-# Source0-md5:	d74472b89c3f3b3b0abf6bd809ae34c2
-URL:		http://proxytunnel.sourceforge.net/
+Source0:	https://github.com/proxytunnel/proxytunnel/archive/%{version}.tar.gz
+# Source0-md5:	9a844a735c9833b12c725d2118cd3e37
+Patch0:		%{name}-git.patch
+Patch1:		%{name}-git-openssl-warnings.patch
+URL:		https://github.com/proxytunnel/proxytunnel
 BuildRequires:	openssl-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,6 +43,8 @@ aktualnie potrafi:
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \
@@ -52,7 +56,8 @@ aktualnie potrafi:
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix}
+	prefix=%{_prefix} \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
