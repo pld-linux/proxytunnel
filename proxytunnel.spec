@@ -2,7 +2,7 @@ Summary:	Proxy Tunnel ssh-over-https hack
 Summary(pl.UTF-8):	Tunel proxy ssh-po-https
 Name:		proxytunnel
 Version:	1.9.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	https://github.com/proxytunnel/proxytunnel/archive/%{version}.tar.gz
