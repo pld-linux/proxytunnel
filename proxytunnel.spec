@@ -1,13 +1,14 @@
 Summary:	Proxy Tunnel ssh-over-https hack
 Summary(pl.UTF-8):	Tunel proxy ssh-po-https
 Name:		proxytunnel
-Version:	1.10.20210604
+Version:	1.12.3
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	https://github.com/proxytunnel/proxytunnel/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	a8ca6a40c40b51681486e317c313d5fc
+# Source0-md5:	c42ea5a2f0a12ec2a4b5ff9fb570eaa8
 URL:		https://github.com/proxytunnel/proxytunnel
+BuildRequires:	asciidoc
 BuildRequires:	openssl-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
